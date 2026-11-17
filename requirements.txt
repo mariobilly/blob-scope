@@ -1,0 +1,10 @@
+# Install PyTorch first (with CUDA if you have an NVIDIA GPU): https://pytorch.org/get-started/locally/
+torch
+fastapi
+uvicorn
+numpy
+pillow
+opencv-python
+rembg
+onnxruntime
+ultralytics

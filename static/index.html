@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Blob Scope</title>
+<link rel="icon" href="/favicon.ico">
+<link rel="stylesheet" href="/static/app.css">
+</head>
+<body>
+<header class="top">
+  <div class="brand"><span class="mark" aria-hidden="true">#3511</span>Blob Scope</div>
+  <button id="open" title="Open a photo or video (Ctrl+O)">Open…</button>
+  <div id="fileinfo" class="fileinfo">No file open</div>
+  <div class="spacer"></div>
+  <button id="random" title="Random look (R)">Randomize</button>
+  <label class="pick" id="photoOutWrap" hidden title="What a photo exports as">
+    <select id="photoOut">
+      <option value="loop">Loop video (MP4)</option>
+      <option value="still">Still (PNG)</option>
+    </select>
+  </label>
+  <label class="pick" id="fpsWrap" hidden title="Frame rate of the photo loop">
+    <select id="fps">
+      <option value="24">24 fps</option>
+      <option value="25" selected>25 fps</option>
+      <option value="30">30 fps</option>
+      <option value="60">60 fps</option>
+    </select>
+  </label>
+  <label class="pick" title="Export size (long side of the finished frame)">
+    <select id="exportSize">
+      <option value="1920" selected>Max 1920 px</option>
+      <option value="1280">Max 1280 px</option>
+      <option value="0">Full size</option>
+    </select>
+  </label>
+  <button id="export" class="primary" title="Export (Ctrl+E)" disabled>Export</button>
+</header>
+
+<main>
+  <section class="stage">
+    <div class="view" id="view">
+      <img id="shot" alt="" draggable="false">
+      <img id="orig" alt="" draggable="false">
+      <div class="badge" id="badge" hidden>Original</div>
+      <div class="busy" id="busy" hidden></div>
+      <div class="empty" id="empty">
+        <div class="drop-art" aria-hidden="true"><span class="t1">#3693 0.8%</span><span class="t2">#3511 28.7%</span></div>
+        <h1>Drop a photo or video here</h1>
+        <p>or <button class="link" id="open2">open a file</button>. You can also drop a file on the desktop shortcut.</p>
+      </div>
+    </div>
+    <div class="scrub" id="playbar" hidden>
+      <button id="play" class="playbtn" title="Play (P)" aria-label="Play">&#9654;</button>
+      <input type="range" id="tpos" min="0" max="1000" value="0" step="1" aria-label="Position">
+      <span id="tlabel" class="mono">0.00 / 6 s</span>
+    </div>
+    <div class="hint">Hold <kbd>Space</kbd> to see the original · <kbd>P</kbd> play · <kbd>R</kbd> randomize · <kbd>Ctrl+E</kbd> export · double-click a slider to reset it · <span id="ms" class="mono"></span></div>
+  </section>
+
+  <aside class="side" id="side">
+    <div class="presets" id="presets"></div>
+    <div id="controls"></div>
+  </aside>
+</main>
+
+<div class="modal" id="progress" hidden>
+  <div class="card">
+    <div class="ptitle" id="ptitle">Exporting…</div>
+    <div class="bar"><div id="pbar"></div></div>
+    <div class="pinfo mono" id="pinfo"></div>
+    <div class="pact"><button id="pcancel">Cancel</button></div>
+  </div>
+</div>
+
+<div class="toast" id="toast" hidden></div>
+<script src="/static/app.js"></script>
+</body>
+</html>
