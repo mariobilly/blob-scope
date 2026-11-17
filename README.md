@@ -13,6 +13,28 @@ pale dots sparkle on navy, navy specks sit on white paper, and fire stays warm. 
 Inspired by the blob-tracking dither look in a reel by [Ishan Upadhyay](https://www.instagram.com/reel/DeFDxdVTXCz/).
 Blob Scope is an independent project and shares no code with it.
 
+![Blob Scope](docs/screenshot.jpg)
+
+<!-- videos:start -->
+## See it in action
+
+<p align="center"><a href="docs/videos/tutorial.mp4"><img src="docs/videos/tutorial.jpg" alt="How it works" width="640"></a><br><b>▶ <a href="docs/videos/tutorial.mp4">How it works</a></b> (0:52, with captions)</p>
+
+**Made with Blob Scope, from public-domain portraits (The Met) and a free Pexels clip**
+
+<table><tr>
+<td width="33%" align="center"><a href="docs/videos/examples/portrait-tracker.mp4"><img src="docs/videos/examples/portrait-tracker.gif" alt="Blob Tracker (photo loop)"></a><br><a href="docs/videos/examples/portrait-tracker.mp4">Blob Tracker (photo loop)</a></td>
+<td width="33%" align="center"><a href="docs/videos/examples/portrait-paper.mp4"><img src="docs/videos/examples/portrait-paper.gif" alt="Paper Specimen, Letterbox"></a><br><a href="docs/videos/examples/portrait-paper.mp4">Paper Specimen, Letterbox</a></td>
+<td width="33%" align="center"><a href="docs/videos/examples/portrait-riso.mp4"><img src="docs/videos/examples/portrait-riso.gif" alt="Riso Pop, 1:1"></a><br><a href="docs/videos/examples/portrait-riso.mp4">Riso Pop, 1:1</a></td>
+</tr><tr>
+<td width="33%" align="center"><a href="docs/videos/examples/dancer-tracker.mp4"><img src="docs/videos/examples/dancer-tracker.gif" alt="Blob Tracker (video)"></a><br><a href="docs/videos/examples/dancer-tracker.mp4">Blob Tracker (video)</a></td>
+<td width="33%" align="center"><a href="docs/videos/examples/dancer-night.mp4"><img src="docs/videos/examples/dancer-night.gif" alt="Night Scope (video)"></a><br><a href="docs/videos/examples/dancer-night.mp4">Night Scope (video)</a></td>
+<td width="33%" align="center"><a href="docs/videos/examples/dancer-led.mp4"><img src="docs/videos/examples/dancer-led.gif" alt="Chunky LED (video)"></a><br><a href="docs/videos/examples/dancer-led.mp4">Chunky LED (video)</a></td>
+</tr></table>
+
+Click any picture to play the video. Example sources: *Portrait of a Woman* by Adriaen Hanneman, [The Met](https://www.metmuseum.org/art/collection/search/436630) (CC0); *Portrait of a Man* by Velázquez, [The Met](https://www.metmuseum.org/art/collection/search/437874) (CC0); *Portrait of a Young Man* by Antonello da Messina, [The Met](https://www.metmuseum.org/art/collection/search/435581) (CC0); "A Woman Dancing Gracefully" by [Pavel Danilyuk](https://www.pexels.com/video/a-woman-dancing-gracefully-6939968/) ([Pexels licence](https://www.pexels.com/license/)).
+<!-- videos:end -->
+
 ## Install
 
 You need:
@@ -149,6 +171,7 @@ The server tests use FastAPI's TestClient, which needs httpx (`python -m pip ins
 - [Ultralytics YOLO11](https://github.com/ultralytics/ultralytics) for the people cut-out. Ultralytics and its models
   are licensed under **AGPL-3.0**: check their terms if you plan to use Blob Scope commercially.
 - [rembg](https://github.com/danielgatis/rembg) (MIT) with the ISNet model, for everything else.
+- The examples and the tutorial video use public-domain portraits from [The Met Open Access](https://www.metmuseum.org/about-the-met/policies-and-documents/open-access) programme (CC0): [Adriaen Hanneman](https://www.metmuseum.org/art/collection/search/436630), [Velázquez](https://www.metmuseum.org/art/collection/search/437874), [Antonello da Messina](https://www.metmuseum.org/art/collection/search/435581); and "A Woman Dancing Gracefully" by [Pavel Danilyuk](https://www.pexels.com/video/a-woman-dancing-gracefully-6939968/) ([Pexels licence](https://www.pexels.com/license/)).
 
 ## Licence
 
